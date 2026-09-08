@@ -12,7 +12,11 @@ def main():
         com_depth = select_com_depth()
 
     chessboard = Chessboard()
-
+    for piece_list in chessboard.pieces:
+        for piece in piece_list:
+            print(f"({piece.color}, {piece.ptype})\t", end="")
+        print()
+    
 def print_version():
     print("祢水象棋 V1.0 build: 3")
     print("作者：Xack & 日向")

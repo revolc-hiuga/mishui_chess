@@ -28,3 +28,11 @@ class Coord:
 class Chessboard:
     pieces:list[list[Piece]] = [[]]
     side_to_move = const.BLUE
+
+    def __init__(self):
+        self.pieces = [[]]
+        for _ in range(0, const.Y_SIZE):
+            piece_list:list[Piece] = []
+            for _ in range(0, const.X_SIZE):
+                piece_list.append(Piece(const.NONE, const.NONE_COLOR))
+            self.pieces.append(piece_list)
