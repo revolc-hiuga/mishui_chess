@@ -1,4 +1,5 @@
 import const
+from chessboard import *
 
 def main():
     print("欢迎来到祢水象棋。")
@@ -10,8 +11,7 @@ def main():
     if mode != const.TWO_PLAYERS:
         com_depth = select_com_depth()
 
-    print("mode =", mode, ", com_depth =", com_depth)
-
+    chessboard = Chessboard()
 
 def print_version():
     print("祢水象棋 V1.0 build: 3")
